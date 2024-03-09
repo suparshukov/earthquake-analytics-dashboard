@@ -1,0 +1,4 @@
+.idea
+**/.DS_Store
+**.terraform.lock.*
+02-workflow-orchestration/.env
