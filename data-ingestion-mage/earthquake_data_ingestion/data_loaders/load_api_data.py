@@ -38,11 +38,15 @@ def load_data_from_api(*args, **kwargs):
 
     dfs = []
     while current_date <= date_end:
-        start_time = current_date.strftime("%Y-%m-%d")
-        end_time = (current_date + timedelta(days=1)).strftime("%Y-%m-%d")
-        url = f"https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime={start_time}&endtime={end_time}"
-        df = pd.read_csv(url, dtype=earthquake_dtypes, parse_dates=parse_dates)
-        print(current_date, len(df), df['id'].nunique())
+        try:
+            start_time = current_date.strftime("%Y-%m-%d")
+            end_time = (current_date + timedelta(days=1)).strftime("%Y-%m-%d")
+            url = f"https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime={start_time}&endtime={end_time}"
+            df = pd.read_csv(url, dtype=earthquake_dtypes, parse_dates=parse_dates)
+            print(current_date, len(df), df['id'].nunique())
+        except Exception as inst:
+            print('error')
+            continue
         current_date += timedelta(days=1)
         dfs.append(df)
         time.sleep(1)

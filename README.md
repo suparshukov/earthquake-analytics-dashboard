@@ -1,1 +1,2 @@
-# data-engineering-zoomcamp-final-project
+# Earthquake Analytics Dashboard
+

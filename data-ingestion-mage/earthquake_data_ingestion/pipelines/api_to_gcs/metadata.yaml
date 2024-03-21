@@ -69,7 +69,6 @@ settings:
 spark_config: {}
 tags: []
 type: python
-updated_at: '2024-03-09 19:46:15'
 uuid: api_to_gcs
 variables_dir: /home/src/mage_data/earthquake_data_ingestion
 widgets: []
