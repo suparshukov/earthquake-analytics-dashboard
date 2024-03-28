@@ -36,4 +36,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  earthquakes:
+  earthquake_view:
