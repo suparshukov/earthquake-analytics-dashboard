@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: staging
+    database: zoomcamp-final-project-416709
+    schema: earthquake_dataset
+    tables:
+      - name: earthquake
+
+  # - name: bigquery-public
+  #   database: bigquery-public-data
+  #   schema: geo_openstreetmap
+  #   tables:
+  #     - name: planet_features_multipolygons
